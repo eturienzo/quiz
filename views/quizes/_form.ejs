@@ -2,5 +2,20 @@
 <input type="text" id="preg" name="quiz[pregunta]" value="<%= quiz.pregunta %>"/> <p>
 <label for="resp" class="rem">Respuesta:</label>
 <input type="text" id="resp" name="quiz[respuesta]" value="<%= quiz.respuesta %>"/> <p>
+<label for="tema" class="tema">Tema:</label>
+<select name="quiz[tema]" value="<%= quiz.tema %>">
+  <option value="otro" <% isSelected('otro')%>>Otro</option>
+  <option value="humanidades" <% isSelected('humanidades')%>>Humanidades</option>
+  <option value="ocio" <% isSelected('ocio')%>>Ocio</option>
+  <option value="ciencia" <% isSelected('ciencia') %>>Ciencia</option>
+  <option value="tecnologia" <% isSelected('tecnologia')%>>Tecnolog&iacute;a</option>
+</select>
+<p>
 <a href="/quizes"><button type="button">Cancelar</button></a>
 <input type="submit" value="Salvar">
+
+<% function isSelected(op) {
+   if (op === quiz.tema){ %>
+  selected
+<% } } %>
+
