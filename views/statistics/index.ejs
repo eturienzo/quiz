@@ -1,0 +1,5 @@
+<p>El n&uacute;mero de preguntas:<%= estadisticas.numPreguntas %></p>
+<p>El n&uacute;mero de comentarios totales:<%= estadisticas.numComentarios %></p>
+<p>El n&uacute;mero medio de comentarios por pregunta:<%= estadisticas.numPreguntas?(estadisticas.numComentarios / estadisticas.numPreguntas).toFixed(2):0 %></p>
+<p>El n&uacute;mero de preguntas sin comentarios:<%= estadisticas.numPreguntas - estadisticas.numPreguntasComentadas %></p>
+<p>El n&uacute;mero de preguntas con comentarios:<%= estadisticas.numPreguntasComentadas %></p>
